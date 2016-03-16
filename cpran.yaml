@@ -1,0 +1,18 @@
+---
+Plugin: template
+Homepage: http://cpran.net/plugins/template
+Version: 0.0.1
+Maintainer: José Joaquín Atria <jjatria@gmail.com>
+Depends:
+  praat: 5.0.0+
+  Plugins:
+    testsimple: 0.0.1+
+Recommends:
+License: GPL3
+Readme: readme.md
+Description:
+  Short: a blank plugin template, for you to modify.
+  Long: >
+    Use this plugin template to make your own.
+
+    This is a new paragraph.
