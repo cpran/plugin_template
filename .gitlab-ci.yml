@@ -1,1 +1,13 @@
 # See https://about.gitlab.com/2015/06/08/implementing-gitlab-ci-dot-yml/
+my_job:
+  script:
+    - install_dependencies
+    - prove -v --exec "praat --ansi --pref-dir=~/.praat-dir"
+  stage: test
+  only:
+    - master
+  except:
+    - develop
+  tags:
+    - praat
+    - cpran
