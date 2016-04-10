@@ -1,7 +1,12 @@
 # See https://about.gitlab.com/2015/06/08/implementing-gitlab-ci-dot-yml/
+before_script:
+  - pushd ..
+  - export CPRAN_PRAAT_DIR=$(pwd)
+  - cpran deps template | cpran install
+  - popd
+
 my_job:
   script:
-    - cpran deps template | cpran install
     - prove -v --exec "praat --ansi --pref-dir=../.. --run"
   stage: test
   only:
