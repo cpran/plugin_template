@@ -1,0 +1,6 @@
+# A sample procedure, included from a script
+# Replace with whatever you want
+
+procedure myprocedure .string$
+  appendInfoLine: "# ", .string$
+endproc
