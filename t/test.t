@@ -1,7 +1,20 @@
-include ../../plugin_testsimple/procedures/testsimple.proc
+# A test producing TAP [1] output. This sample file prints it directly
+# to nto have any dependencies, but consider using the testsimple [2]
+# plugin in your own tests.
 
-@no_plan()
+appendInfoLine: "1..1"
 
-@ok: 1, "a passing test"
+result = 1
+if result
+  appendInfoLine: "ok 1 - a passing test"
+else
+  appendInfoLine: "not ok 1 - a passing test"
+endif
 
-@done_testing()
+## Using testsimple, the above would be replaced by
+#
+# @plan(1)
+#
+# @ok: result, "a passing test"
+#
+# @done_testing()
