@@ -1,6 +1,7 @@
 # See https://about.gitlab.com/2015/06/08/implementing-gitlab-ci-dot-yml/
 before_script:
   - source ~/.bashrc
+  - perlbew info
   - pushd ..
   - export CPRAN_PRAAT_DIR=$(pwd)
   - cpran deps template | cpran install
