@@ -1,2 +1,8 @@
 - next: # unreleased
+- v0.0.3:
+  - Populated directories with sample files
+  - Passing CI tests
+- v0.0.2:
+  - Removed dependencies
+- v0.0.1:
   - Initial release
